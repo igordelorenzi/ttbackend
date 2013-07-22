@@ -1,0 +1,27 @@
+<h1>Listing dashes</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Clock in out</th>
+    <th>Dash at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dashes.each do |dash| %>
+  <tr>
+    <td><%= dash.user_id %></td>
+    <td><%= dash.clock_in_out %></td>
+    <td><%= dash.dash_at %></td>
+    <td><%= link_to 'Show', dash %></td>
+    <td><%= link_to 'Edit', edit_dash_path(dash) %></td>
+    <td><%= link_to 'Destroy', dash, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dash', new_dash_path %>

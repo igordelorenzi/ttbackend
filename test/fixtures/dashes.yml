@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: dashes
+#
+#  id           :integer         not null, primary key
+#  user_id      :integer
+#  clock_in_out :integer
+#  dash_at      :datetime
+#  created_at   :datetime        not null
+#  updated_at   :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  clock_in_out: 1
+  dash_at: 2013-07-10 12:19:37
+
+two:
+  user_id: 1
+  clock_in_out: 1
+  dash_at: 2013-07-10 12:19:37

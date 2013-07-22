@@ -1,0 +1,14 @@
+<div class="center hero-unit">
+  <h1>Welcome to the Ticktoken</h1>
+  <h2>
+    This is the home page for the
+    <a href="http://github.com/edulpn/ticktoken">Ticktoken</a>
+    application.
+  </h2>
+  <% if !signed_in? %>
+  	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <% else %>
+  	Start using by 
+  	<%= link_to "clicking here!", current_user %>
+  <% end %>
+</div>

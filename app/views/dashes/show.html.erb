@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @dash.user_id %>
+</p>
+
+<p>
+  <b>Clock in out:</b>
+  <%= @dash.clock_in_out %>
+</p>
+
+<p>
+  <b>Dash at:</b>
+  <%= @dash.dash_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_dash_path(@dash) %> |
+<%= link_to 'Back', dashes_path %>

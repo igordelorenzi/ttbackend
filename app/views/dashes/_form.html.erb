@@ -1,0 +1,29 @@
+<%= form_for(@dash) do |f| %>
+  <% if @dash.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dash.errors.count, "error") %> prohibited this dash from being saved:</h2>
+
+      <ul>
+      <% @dash.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :clock_in_out %><br />
+    <%= f.number_field :clock_in_out %>
+  </div>
+  <div class="field">
+    <%= f.label :dash_at %><br />
+    <%= f.datetime_select :dash_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

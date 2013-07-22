@@ -1,0 +1,14 @@
+<li>
+  <span class="timestamp"><%= dash.dash_at %></span>
+  <span class="content">
+    <% if dash.clock_in_out == 0 %>
+      Entrada
+    <% else %>
+      Saída
+    <% end %>
+    <% if current_user?(dash.user) %>
+    	<%= link_to "delete", dash, method: :delete, 
+        	confirm: "You sure?", title: dash.dash_at %>
+    <% end %>
+  </span>
+</li>
